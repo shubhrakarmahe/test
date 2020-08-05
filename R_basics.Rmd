@@ -1,0 +1,96 @@
+---
+title: "R_basics"
+author: "Shubhra"
+date: "05/08/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+# 'Vector - most basic object of R'
+# Vector contains only homogenous objects
+# List can contain hetrogenous objects
+
+# 'Five types of atomic classes of objects :
+# 1. numeric
+# 2. integer
+# 3. complex 
+# 4. character 
+# 5. logical
+
+
+# numeric vector
+x <- c(0.4,1.5) 
+x # Auto printing
+print(x) # explicit printing
+
+attributes(x)
+
+# creates numeric vector of length 4 and initial value as 0
+x1 <- vector(mode = "numeric",
+             length = 4)
+x1
+
+# character vector
+y <- c('a','b')
+y
+
+y1 <- vector(mode = "character",
+             length = 5)
+y1
+
+# logical vector
+z <- c(T,F)
+z
+
+z1 <- vector(mode = "logical",
+             length = 3)
+z1
+
+
+# complex vector
+w <- c(1+2i, 3+7i)
+w
+
+w1 <- vector(mode = "complex",
+             length = 4)
+w1
+
+# integer vector
+u <- c(1L,3L)
+v <- c(3:10)
+
+u
+v
+
+u1 <- vector(mode = "integer",
+             length = 5)
+u1
+
+#  vector coercion
+a <- c(1,'a') # coerced to character
+a
+
+b <- c(T,1) # coerced to numeric
+b
+
+c <- c(T,'a') # coerced to character
+c
+
+d <- c(2L,3) # coerced to numeric
+d
+
+
+```
+
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
